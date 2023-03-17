@@ -91,7 +91,7 @@ async function callOpenAI(prompt: string, apiKey: string, input: string) {
 
   try {
     const response = await openai.createEdit({
-      model: "text-davinci-edit-001",
+      model: "code-davinci-edit-001",
       input,
       instruction: prompt,
     });

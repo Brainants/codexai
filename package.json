@@ -2,8 +2,11 @@
   "name": "codexai",
   "displayName": "CodexAI",
   "description": "Code Assistant using the new Codex model from openai",
-  "publisher": "prasum",
-  "version": "0.0.1",
+  "publisher": "brainants",
+  "version": "0.0.3",
+  "repository": {
+    "url": "https://github.com/Brainants/codexai/"
+  },
   "engines": {
     "vscode": "^1.76.0"
   },
@@ -36,12 +39,16 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "vscode:prepublish": "yarn esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "yarn esbuild-base -- --sourcemap",
+    "esbuild-watch": "yarn esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
@@ -52,6 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "@vscode/test-electron": "^2.2.3",
+    "esbuild": "^0.17.12",
     "eslint": "^8.34.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",

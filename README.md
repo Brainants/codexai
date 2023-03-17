@@ -2,6 +2,8 @@
 
 This extension implements OpenAI models as a Coding Assistant.
 
+Use command palette or shortcut `cmd + ctrl + i` to enter prompt.
+
 ## Features
 
 ## Requirements
@@ -25,3 +27,11 @@ Users appreciate release notes as you update your extension.
 ### 0.0.1
 
 Initial release of codexai
+
+### 0.0.2
+
+Use code model
+
+### 0.0.3
+
+Add bundling
