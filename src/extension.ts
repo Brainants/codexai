@@ -5,9 +5,6 @@ import * as path from "path";
 import axios from "axios";
 import * as jwt from "jsonwebtoken";
 import { Configuration, CreateEditResponse, OpenAIApi } from "openai";
-import * as dotenv from "dotenv";
-
-dotenv.config();
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed

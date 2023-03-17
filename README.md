@@ -39,3 +39,7 @@ Add bundling
 ### 0.0.4
 
 Add temperature 0 for better and consice results
+
+### 0.0.6
+
+removed bundlelr for the moment
