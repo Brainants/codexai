@@ -94,6 +94,7 @@ async function callOpenAI(prompt: string, apiKey: string, input: string) {
       model: "code-davinci-edit-001",
       input,
       instruction: prompt,
+      temperature: 0,
     });
     return response.data;
   } catch (error) {

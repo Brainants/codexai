@@ -35,3 +35,7 @@ Use code model
 ### 0.0.3
 
 Add bundling
+
+### 0.0.4
+
+Add temperature 0 for better and consice results

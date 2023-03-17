@@ -3,7 +3,7 @@
   "displayName": "CodexAI",
   "description": "Code Assistant using the new Codex model from openai",
   "publisher": "brainants",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "url": "https://github.com/Brainants/codexai/"
   },
